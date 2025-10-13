@@ -123,7 +123,7 @@
 
               <!-- Button Download CV -->
               <div class="d-flex flex-wrap gap-4">
-                <a href="peace/assets/PEACE_OLAPADE_CV.pdf" class="btn btn-lg me-2 mb-2 mb-sm-0 wow fadeInLeft" data-wow-delay="0.1s">
+                <a href="peace/assets/PEACE OLAPADE-CV.pdf" class="btn btn-lg me-2 mb-2 mb-sm-0 wow fadeInLeft" data-wow-delay="0.1s">
                   Download CV <i class="fa fa-download ms-2"></i>
                 </a>
               </div>
@@ -280,11 +280,11 @@
               <!-- /Features List -->
 
               <!-- Link Resume -->
-              <div class="mt-4 wow fadeInLeft" data-wow-delay="1s">
-                <a href="peace/assets/PEACE_OLAPADE_CV.pdf" class="btn btn-md">
+              <!-- <div class="mt-4 wow fadeInLeft" data-wow-delay="1s">
+                <a href="peace/assets/PEACE OLAPADE-CV.pdf" class="btn btn-md">
                   Resume
                 </a>
-              </div>
+              </div> -->
               <!-- /Link Resume -->
 
             </div>
@@ -515,7 +515,7 @@
             <!-- Project Box (Lightbox Video) -->
             <div class="project-box">
               <div class="project-box-container wow scalexIn" data-wow-duration="1s">
-                <a href="https://myecommercesite.com" target="_blank">
+                <a href="#" target="_blank">
                   <img src="peace/assets/images/projects/project-2.jpg" alt="" class="wow fadeIn" data-wow-delay="1.2s">
                   <div class="content-overlay">
                     <div>
@@ -533,7 +533,7 @@
             <!-- Project Box -->
             <div class="project-box mt-lg-5">
               <div class="project-box-container wow scalexIn" data-wow-duration="1s">
-                <a href="https://myecommercesite.com" target="_blank">
+                <a href="#" target="_blank">
                   <img src="peace/assets/images/projects/Food Preview.png" alt="" class="wow fadeIn" data-wow-delay="1.2s">
                   <div class="content-overlay">
                     <div>
@@ -612,10 +612,6 @@
           </div>
           <div class="col-lg-6">
             <!-- Contact Form -->
-            <div class="form-action-message mb-4">
-              <div class="success-message d-none">Thank you! Your Message has been sent.</div>
-              <div class="error-message d-none">Something went wrong, Please try again!</div>
-            </div>
             <form class="form contact-form wow fadeScaleOutIn" id="contactForm" action="https://formspree.io/f/xkgqgbal" method="POST">
               <div class="row">
                 <div class="col-md-6">
@@ -641,6 +637,7 @@
                   <span class="btn-content">Send Message</span>
                 </button>
               </div>
+            </form>
             <!-- /Contact Form -->
           </div>
         </div>
@@ -717,11 +714,9 @@
   <script src="peace/assets/js/main.js"></script>
   <!-- /SCRIPTS -->
 
-  <script>
+<script>
 document.addEventListener("DOMContentLoaded", function() {
   const form = document.getElementById("contactForm");
-  const successMessage = document.querySelector(".success-message");
-  const errorMessage = document.querySelector(".error-message");
   const submitBtn = document.getElementById("submit_btn");
 
   form.addEventListener("submit", async function(e) {
@@ -739,16 +734,13 @@ document.addEventListener("DOMContentLoaded", function() {
       });
 
       if (response.ok) {
-        successMessage.classList.remove("d-none");
-        errorMessage.classList.add("d-none");
+        alert("✅ Message sent successfully!");
         form.reset();
       } else {
-        errorMessage.classList.remove("d-none");
-        successMessage.classList.add("d-none");
+        alert("⚠️ Something went wrong. Please try again.");
       }
-    } catch (err) {
-      errorMessage.classList.remove("d-none");
-      successMessage.classList.add("d-none");
+    } catch (error) {
+      alert("❌ Network error. Please check your connection and try again.");
     } finally {
       submitBtn.disabled = false;
       submitBtn.innerText = "Send Message";
@@ -756,5 +748,8 @@ document.addEventListener("DOMContentLoaded", function() {
   });
 });
 </script>
+
+
+
 </body>
 </html>
