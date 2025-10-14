@@ -4511,7 +4511,7 @@ html.lenis body {
 @media (max-width: 768px) {
   /* Reduce About section heading "Creating Digital..." */
   .section-title-s4 {
-    font-size: 45px !important; /* adjust as needed */
+    font-size: 40px !important; /* adjust as needed */
     line-height: 1.3;
   }
 
@@ -4524,8 +4524,6 @@ html.lenis body {
   #service .section-title-s4 {
     font-size: 40px !important;
   }
-
-  /* Reduce email + contact text */
 
 }
 
@@ -4553,4 +4551,10 @@ html.lenis body {
     font-size: 16px !important;   /* adjust size as needed */
     word-break: break-word;       /* helps if the email is too long */
   }
+
+  #contactForm{
+    margin-top: 50px;
+  }
+
+  
 }
