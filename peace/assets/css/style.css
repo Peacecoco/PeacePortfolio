@@ -734,7 +734,7 @@ a:hover {
 @media (min-width: 992px) {
   .service-box-s1 {
     padding: 2rem 2.5rem;
-    margin-bottom: 0;
+    /* margin-bottom: 0; */
   }
   .service-box-s1 .title {
     font-size: 2rem;
